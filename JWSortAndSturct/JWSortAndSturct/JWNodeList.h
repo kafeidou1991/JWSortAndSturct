@@ -30,7 +30,14 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param node node
  */
-- (void)insertNodeList:(JWNodeList *)node afterNode:(JWNodeList*)afterNode;
+- (void)insertNodeList:(JWNodeList *)node withIndex:(int)index;
+
+/**
+ 获取某个节点索引
+ 
+ @param index 索引
+ */
+- (void)deleteNode:(int)index;
 
 /**
  创建双向链表
@@ -54,14 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  链表长度
  */
-- (void)getListLengh;
-
-/**
- 获取某个节点索引
-
- @param node 节点
- */
-- (void)getNodeIndex:(JWNodeList *)node;
+- (int)getListLengh;
 
 
 @end

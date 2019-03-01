@@ -74,9 +74,36 @@
     return headNode;
 }
 #pragma mark -  单链表插入某个节点
-- (void)insertNodeList:(JWNodeList *)node afterNode:(JWNodeList *)afterNode {
+- (void)insertNodeList:(JWNodeList *)node withIndex:(int)index {
+    int i = 0;
+    JWNodeList * p = self;
+    
+    
     
 }
+#pragma mark -  单链表删除节点
+- (void)deleteNode:(int)index {
+    //因为有头节点，所以从1开始计算索引
+    int i = 1;
+    JWNodeList * p, * q;
+    p = self;
+    while (p->next && i < index) {
+        p = p->next;
+        ++i;
+    }
+    if (!p->next || index < i) {
+        NSLog(@"删除的元素不存在");
+        return;
+    }
+    //要删除的元素
+    q = p->next;
+    //链接
+    p->next = q->next;
+    q = nil;
+    NSLog(@"删除完成");
+    
+}
+
 #pragma mark -  打印链表
 + (void)printeNodeList:(JWNodeList * )list{
     JWNodeList * copyList = list;
@@ -99,14 +126,15 @@
 }
 
 #pragma mark -  清除长度
-- (void)getListLengh {
+- (int)getListLengh {
     count = 0;
-    JWNodeList * p = self->next;
+    JWNodeList * p = self;
     while (p) {
         count++;
         p = p->next;
     }
     NSLog(@"链表长度%d",count);
+    return count;
 }
 #pragma mark -  获取节点
 - (void)getNodeIndex:(JWNodeList *)node {
