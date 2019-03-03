@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JWNodeList : NSObject {
+    @public
     NSNumber * data;
     JWNodeList * next;
     

@@ -20,8 +20,17 @@ int main(int argc, const char * argv[]) {
         //单向链表
         JWNodeList * list = [JWNodeList createNodeList:@[@1,@2,@3,@4,@5,@6,@7,@8]];
 //        [list cleanNodeList];
+        
 //        [list getListLengh];
+        
 //        [list deleteNode:10];
+        
+        //插入
+//        JWNodeList * node = [JWNodeList new];
+//        node->data = @100;
+//        [list insertNodeList:node withIndex:8];
+        
+        
         
         [JWNodeList printeNodeList:list];
         

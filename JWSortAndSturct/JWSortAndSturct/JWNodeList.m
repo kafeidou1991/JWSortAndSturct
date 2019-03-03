@@ -8,10 +8,7 @@
 
 #import "JWNodeList.h"
 
-@implementation JWNodeList {
-    int count;
-}
-
+@implementation JWNodeList
 + (instancetype)createNodeList:(NSArray *)array {
 //    [JWNodeList printeNodeList:[self headCreateNodeList:array]];
     return [self tailCreateNodeList:array];
@@ -75,11 +72,20 @@
 }
 #pragma mark -  单链表插入某个节点
 - (void)insertNodeList:(JWNodeList *)node withIndex:(int)index {
-    int i = 0;
+    int i = 1;
     JWNodeList * p = self;
-    
-    
-    
+    while (p && index > i) {
+        i++;
+        p = p->next;
+    }
+    if (!p || index < i || !node) {
+        NSLog(@"插入节点不存在");
+        return;
+    }
+    //设置node
+    node->next = p->next;
+    p->next = node;
+    NSLog(@"插入成功");
 }
 #pragma mark -  单链表删除节点
 - (void)deleteNode:(int)index {
@@ -127,7 +133,7 @@
 
 #pragma mark -  清除长度
 - (int)getListLengh {
-    count = 0;
+    int count = 0;
     JWNodeList * p = self;
     while (p) {
         count++;
