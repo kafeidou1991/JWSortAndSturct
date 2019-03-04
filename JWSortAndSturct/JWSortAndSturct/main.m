@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
         
         
         //单向链表
-        JWNodeList * list = [JWNodeList createNodeList:@[@1,@2,@3,@4,@5,@6,@7,@8]];
+//        JWNodeList * list = [JWNodeList createNodeList:@[@1,@2,@3,@4,@5,@6,@7,@8]];
 //        [list cleanNodeList];
         
 //        [list getListLengh];
@@ -28,18 +28,25 @@ int main(int argc, const char * argv[]) {
         
 //        list = [list reveriseNodeList];
 //        [list middleNode];
-        [list checkCircle];
+//        [list checkCircle];
         
         //插入
 //        JWNodeList * node = [JWNodeList new];
 //        node->data = @100;
 //        [list insertNodeList:node withIndex:8];
         
-        [JWNodeList printeNodeList:list];
+//        [JWNodeList printeNodeList:list];
         
         //栈
+        JWStack * stack = [JWStack new];
         
+        for (int i = 0; i<10; i++) {
+            [stack pushElem:[NSNumber numberWithInt:i]];
+        }
         
+        for (int i = 0; i<5; i++) {
+            [stack pop];
+        }
         
     
         

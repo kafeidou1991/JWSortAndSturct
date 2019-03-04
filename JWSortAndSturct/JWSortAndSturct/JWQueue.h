@@ -1,5 +1,5 @@
 //
-//  JWStack.h
+//  JWQueue.h
 //  JWSortAndSturct
 //
 //  Created by 张竟巍 on 2019/3/4.
@@ -10,22 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JWStack : NSObject
-
-
-/**
- 添加入栈
-
- @param elem <#elem description#>
- */
-- (void)pushElem:(NSNumber *)elem;
-
-
-/**
- 出栈
- */
-- (void)pop;
-
+@interface JWQueue : NSObject
 
 @end
 

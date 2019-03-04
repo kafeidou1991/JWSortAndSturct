@@ -11,6 +11,7 @@
 		B7F7864B22278F7F00F27256 /* JWSort.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7864A22278F7F00F27256 /* JWSort.m */; };
 		B7F786542227DCA800F27256 /* JWNodeList.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F786532227DCA800F27256 /* JWNodeList.m */; };
 		B7F8C2AC222CC6BA00B0388F /* JWStack.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F8C2AB222CC6BA00B0388F /* JWStack.m */; };
+		B7F8C2AF222D34A700B0388F /* JWQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F8C2AE222D34A700B0388F /* JWQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		B7F786532227DCA800F27256 /* JWNodeList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWNodeList.m; sourceTree = "<group>"; };
 		B7F8C2AA222CC6BA00B0388F /* JWStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWStack.h; sourceTree = SOURCE_ROOT; };
 		B7F8C2AB222CC6BA00B0388F /* JWStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWStack.m; sourceTree = SOURCE_ROOT; };
+		B7F8C2AD222D34A700B0388F /* JWQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWQueue.h; sourceTree = "<group>"; };
+		B7F8C2AE222D34A700B0388F /* JWQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				B7F7864222278F3100F27256 /* main.m */,
+				B7F8C2AD222D34A700B0388F /* JWQueue.h */,
+				B7F8C2AE222D34A700B0388F /* JWQueue.m */,
 				B7F8C2AA222CC6BA00B0388F /* JWStack.h */,
 				B7F8C2AB222CC6BA00B0388F /* JWStack.m */,
 				B7F786522227DCA800F27256 /* JWNodeList.h */,
@@ -133,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F8C2AF222D34A700B0388F /* JWQueue.m in Sources */,
 				B7F7864B22278F7F00F27256 /* JWSort.m in Sources */,
 				B7F7864322278F3100F27256 /* main.m in Sources */,
 				B7F786542227DCA800F27256 /* JWNodeList.m in Sources */,
