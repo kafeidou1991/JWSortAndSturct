@@ -48,6 +48,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)createTwoNodeList:(NSArray *)array;
 
+/**
+ 反转链表
+ */
+- (JWNodeList *)reveriseNodeList;
+
+/**
+ 查找中间节点
+ */
+- (void)middleNode;
+
+/**
+ 检查是否存在环
+ */
+- (void)checkCircle;
 
 
 /**

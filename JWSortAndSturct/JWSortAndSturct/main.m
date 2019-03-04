@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "JWSort.h"
 #import "JWNodeList.h"
+#import "JWStack.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -25,14 +26,22 @@ int main(int argc, const char * argv[]) {
         
 //        [list deleteNode:10];
         
+//        list = [list reveriseNodeList];
+//        [list middleNode];
+        [list checkCircle];
+        
         //插入
 //        JWNodeList * node = [JWNodeList new];
 //        node->data = @100;
 //        [list insertNodeList:node withIndex:8];
         
-        
-        
         [JWNodeList printeNodeList:list];
+        
+        //栈
+        
+        
+        
+    
         
 
         
