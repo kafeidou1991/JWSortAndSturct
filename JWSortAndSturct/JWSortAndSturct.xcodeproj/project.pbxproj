@@ -33,8 +33,8 @@
 		B7F7864A22278F7F00F27256 /* JWSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWSort.m; sourceTree = "<group>"; };
 		B7F786522227DCA800F27256 /* JWNodeList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWNodeList.h; sourceTree = "<group>"; };
 		B7F786532227DCA800F27256 /* JWNodeList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWNodeList.m; sourceTree = "<group>"; };
-		B7F8C2AA222CC6BA00B0388F /* JWStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWStack.h; sourceTree = SOURCE_ROOT; };
-		B7F8C2AB222CC6BA00B0388F /* JWStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWStack.m; sourceTree = SOURCE_ROOT; };
+		B7F8C2AA222CC6BA00B0388F /* JWStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JWStack.h; path = JWSortAndSturct/JWStack.h; sourceTree = SOURCE_ROOT; };
+		B7F8C2AB222CC6BA00B0388F /* JWStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JWStack.m; path = JWSortAndSturct/JWStack.m; sourceTree = SOURCE_ROOT; };
 		B7F8C2AD222D34A700B0388F /* JWQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWQueue.h; sourceTree = "<group>"; };
 		B7F8C2AE222D34A700B0388F /* JWQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */

@@ -10,6 +10,7 @@
 #import "JWSort.h"
 #import "JWNodeList.h"
 #import "JWStack.h"
+#import "JWQueue.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -38,17 +39,27 @@ int main(int argc, const char * argv[]) {
 //        [JWNodeList printeNodeList:list];
         
         //栈
-        JWStack * stack = [JWStack new];
+//        JWStack * stack = [JWStack new];
+//
+//        for (int i = 0; i<10; i++) {
+//            [stack pushElem:[NSNumber numberWithInt:i]];
+//        }
+//
+//        for (int i = 0; i<5; i++) {
+//            [stack pop];
+//        }
         
-        for (int i = 0; i<10; i++) {
-            [stack pushElem:[NSNumber numberWithInt:i]];
-        }
+        //队列
+        JWQueue * queue = [[JWQueue alloc]initQueue];
+
+        [queue enQueue:@1];
+        [queue enQueue:@2];
+        [queue enQueue:@3];
         
-        for (int i = 0; i<5; i++) {
-            [stack pop];
-        }
-        
-    
+//        [queue outQueue];
+//        [queue outQueue];
+//        [queue outQueue];
+//        [queue outQueue];
         
 
         
