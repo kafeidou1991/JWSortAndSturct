@@ -11,6 +11,7 @@
 #import "JWNodeList.h"
 #import "JWStack.h"
 #import "JWQueue.h"
+#import "JWBinaryTree.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -50,18 +51,28 @@ int main(int argc, const char * argv[]) {
 //        }
         
         //队列
-        JWQueue * queue = [[JWQueue alloc]initQueue];
-
-        [queue enQueue:@1];
-        [queue enQueue:@2];
-        [queue enQueue:@3];
+//        JWQueue * queue = [[JWQueue alloc]initQueue];
+//
+//        [queue enQueue:@1];
+//        [queue enQueue:@2];
+//        [queue enQueue:@3];
         
 //        [queue outQueue];
 //        [queue outQueue];
 //        [queue outQueue];
 //        [queue outQueue];
         
-
+        //二叉树
+        JWBinaryTree * tree = [JWBinaryTree creayBinaryTree:@[@9,@3,@4,@6,@7,@1,@2,@5,@8]];
+//        JWBinaryTree * tree = [JWBinaryTree creayBinaryTree:@[@1,@2,@3,@4,@5,@6,@7,@8,@9]];
+//        JWBinaryTree * tree = [JWBinaryTree creayBinaryTree:@[@9,@8,@7,@6,@5,@4,@3,@2,@1]];
+        
+//        JWBinaryTree * indexNode = [JWBinaryTree binaryTreeIndex:3 rootTree:tree];
+        
+        [JWBinaryTree preOrderBinaryTree:tree];
+        
+        [JWBinaryTree inOrderBinaryTree:tree];
+        
         
     }
     return 0;
