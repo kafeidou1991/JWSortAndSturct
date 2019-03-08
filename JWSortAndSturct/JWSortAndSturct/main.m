@@ -68,10 +68,28 @@ int main(int argc, const char * argv[]) {
 //        JWBinaryTree * tree = [JWBinaryTree creayBinaryTree:@[@9,@8,@7,@6,@5,@4,@3,@2,@1]];
         
 //        JWBinaryTree * indexNode = [JWBinaryTree binaryTreeIndex:3 rootTree:tree];
+        //反转二叉树
+//        tree = [JWBinaryTree reversBinaryTree:tree];
+        //前序
+//        [JWBinaryTree preOrderBinaryTree:tree];
+//        //中序
+//        [JWBinaryTree inOrderBinaryTree:tree];
+        //后序
+//        [JWBinaryTree postOrderBinaryTree:tree];
+        //曾层次遍历
+//        [JWBinaryTree levelOrderBinaryTree:tree];
+        //最大深度
+//        int depthTree = [JWBinaryTree depthForBinaryTree:tree];
+//        NSLog(@"二叉树深度为       %d",depthTree);
         
-        [JWBinaryTree preOrderBinaryTree:tree];
+//        int width = [JWBinaryTree widthForBinaryTree:tree];
+//        NSLog(@"二叉树宽度为       %d",width);
         
-        [JWBinaryTree inOrderBinaryTree:tree];
+//        int number = [JWBinaryTree numberOfNodeForBinary:tree];
+//        NSLog(@"二叉树所有节点数       %d",number);
+        
+        int number = [JWBinaryTree numberOfLeafNodeForBinaryTree:tree];
+        NSLog(@"二叉树所有叶子节点数       %d",number);
         
         
     }

@@ -45,6 +45,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (JWBinaryTree *)binaryTreeIndex:(NSInteger)index rootTree:(JWBinaryTree *)rootThree;
 
 /**
+ 翻转二叉树
+
+ @param rootNode 二叉树
+ @return 新的二叉树
+ */
++ (JWBinaryTree *)reversBinaryTree:(JWBinaryTree *)rootNode;
+
+/**
  前序遍历
 
  @param rootNode 二叉树
@@ -58,7 +66,51 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)inOrderBinaryTree:(JWBinaryTree *)rootNode;
 
+/**
+ 后序遍历
+ 
+ @param rootNode 二叉树
+ */
++ (void)postOrderBinaryTree:(JWBinaryTree *)rootNode;
 
+/**
+ 层次遍历
+
+ @param rootNode 二叉树
+ */
++ (void)levelOrderBinaryTree:(JWBinaryTree *)rootNode;
+
+/**
+ 二叉树的深度
+
+ @param rootNode 二叉树
+ @return 深度
+ */
++ (int)depthForBinaryTree:(JWBinaryTree *)rootNode;
+
+/**
+ 二叉树的宽度
+
+ @param rootNode 茶树
+ @return 宽度
+ */
++ (int)widthForBinaryTree:(JWBinaryTree *)rootNode;
+
+/**
+ 二叉树所有节点数
+
+ @param rootNode 二叉树
+ @return num
+ */
++ (int)numberOfNodeForBinary:(JWBinaryTree *)rootNode;
+
+/**
+ 二叉树所有叶子节点
+
+ @param rootNode 二叉树
+ @return num
+ */
++ (int)numberOfLeafNodeForBinaryTree:(JWBinaryTree *)rootNode;
 
 @end
 

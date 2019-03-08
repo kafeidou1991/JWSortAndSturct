@@ -62,6 +62,24 @@
     NSLog(@"没找到");
     return nil;
 }
+#pragma mark - 翻转二叉树
+//算法L： 递归：如果遇到子节点 返回当前二叉树， 遍历左子树、右子树，临时变量改变
++ (JWBinaryTree *)reversBinaryTree:(JWBinaryTree *)rootNode {
+    if (!rootNode) {
+        return nil;
+    }
+    if (!rootNode.leftChild && !rootNode.rightChild) {
+        return rootNode;
+    }
+    [self reversBinaryTree:rootNode.leftChild];
+    [self reversBinaryTree:rootNode.rightChild];
+    
+    //反转
+    JWBinaryTree * tmp = rootNode.leftChild;
+    rootNode.leftChild = rootNode.rightChild;
+    rootNode.rightChild = tmp;
+    return rootNode;
+}
 #pragma mark - 前序遍历
 + (void)preOrderBinaryTree:(JWBinaryTree *)rootNode {
     if (!rootNode) {
@@ -80,7 +98,99 @@
     NSLog(@"中序遍历节点值：《%@》",rootNode.data);
     [self inOrderBinaryTree:rootNode.rightChild];
 }
-
+#pragma mark - 后序遍历
++ (void)postOrderBinaryTree:(JWBinaryTree *)rootNode {
+    if (!rootNode) {
+        return;
+    }
+    [self postOrderBinaryTree:rootNode.leftChild];
+    [self postOrderBinaryTree:rootNode.rightChild];
+    NSLog(@"后序遍历节点值：《%@》",rootNode.data);
+}
+#pragma mark - 层次遍历
+//层次遍历，从上到下 从左到右 依次遍历 又叫 广度优先遍历 需要用到队列
++ (void)levelOrderBinaryTree:(JWBinaryTree *)rootNode {
+    if (!rootNode) {
+        return;
+    }
+    NSMutableArray * queueArray = [NSMutableArray arrayWithObject:rootNode];
+    while (queueArray.count > 0) {
+        JWBinaryTree * node = [queueArray firstObject];
+        NSLog(@"层次遍历节点值：《%@》",node.data);
+        //FIFO原则
+        [queueArray removeObjectAtIndex:0];
+        if (node.leftChild) {
+            [queueArray addObject:node.leftChild];
+        }
+        if (node.rightChild) {
+            [queueArray addObject:node.rightChild];
+        }
+    }
+}
+#pragma mark - 二叉树深度
+/*算法： 1.node为nil返回0
+        2.node.left =nil & node.right = nil 深度为1
+        3.递归取MAX(left,right) +1
+ */
++ (int)depthForBinaryTree:(JWBinaryTree *)rootNode {
+    if (!rootNode) {
+        return 0;
+    }
+    if (!rootNode.leftChild && !rootNode.rightChild) {
+        return 1;
+    }
+    int leftDepth = [self depthForBinaryTree:rootNode.leftChild];
+    int rightDepth = [self depthForBinaryTree:rootNode.rightChild];
+    
+    return MAX(leftDepth, rightDepth) + 1;
+}
+#pragma mark - 二叉树宽度
+/*算法： FIFO遍历每一层 比较大小
+ */
++ (int)widthForBinaryTree:(JWBinaryTree *)rootNode {
+    if (!rootNode) {
+        return 0;
+    }
+    NSMutableArray * queueArray = [NSMutableArray arrayWithObject:rootNode];
+    int maxWidth = 1; //有根节点所以至少为1
+    int currWidth = 0;
+    while (queueArray.count > 0) {
+        currWidth = (int)queueArray.count;
+        for (int i = 0; i < currWidth; i++) {
+            JWBinaryTree * node = [queueArray firstObject];
+            [queueArray removeObjectAtIndex:0]; //第一个出列
+            if (node.leftChild) {
+                [queueArray addObject:node.leftChild];
+            }
+            if (node.rightChild) {
+                [queueArray addObject:node.rightChild];
+            }
+        }
+        maxWidth = MAX((int)queueArray.count, maxWidth);
+    }
+    return maxWidth;
+}
+#pragma mark - 二叉树所有节点数
+//二叉树所有节点数=左子树节点数+右子树节点数+1(根节点)
+//如果求某层的节点数：  if leve==1 ret 1 ； num = [self number:node.left level:level-1] +  [self number:node.right level:level-1] [self number:node.right level:level-1]
+//如果是第一层返回1 ，某层节点数= k-1层的左子树数+ k-1层右子树数
++ (int)numberOfNodeForBinary:(JWBinaryTree *)rootNode {
+    if (!rootNode) {
+        return 0;
+    }
+    return [self numberOfNodeForBinary:rootNode.leftChild] + [self numberOfNodeForBinary:rootNode.rightChild] + 1;
+}
+#pragma mark - 二叉树所有叶子节点数
+//二叉树所有叶子节点数=左子树叶子节点数+右子树叶子节点数
++ (int)numberOfLeafNodeForBinaryTree:(JWBinaryTree *)rootNode {
+    if (!rootNode) {
+        return 0;
+    }
+    if (!rootNode.leftChild && !rootNode.rightChild) {
+        return 1;
+    }
+    return [self numberOfLeafNodeForBinaryTree:rootNode.leftChild] + [self numberOfLeafNodeForBinaryTree:rootNode.rightChild];
+}
 
 
 
