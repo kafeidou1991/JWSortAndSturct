@@ -16,8 +16,8 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         //排序
-//        JWSort * sort = [JWSort new];
-//        [sort sort];
+        JWSort * sort = [JWSort new];
+        [sort sort];
         
         
         //单向链表

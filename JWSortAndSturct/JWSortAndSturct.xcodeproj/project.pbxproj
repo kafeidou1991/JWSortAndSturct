@@ -74,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				B7F7864222278F3100F27256 /* main.m */,
+				B7F7864922278F7F00F27256 /* JWSort.h */,
+				B7F7864A22278F7F00F27256 /* JWSort.m */,
 				B707C77D2230ED4000C2F2FE /* JWTreeInfo.h */,
 				B7889051222E732500B282FA /* JWBinaryTree.h */,
 				B7889052222E732500B282FA /* JWBinaryTree.m */,
@@ -83,8 +85,6 @@
 				B7F8C2AB222CC6BA00B0388F /* JWStack.m */,
 				B7F786522227DCA800F27256 /* JWNodeList.h */,
 				B7F786532227DCA800F27256 /* JWNodeList.m */,
-				B7F7864922278F7F00F27256 /* JWSort.h */,
-				B7F7864A22278F7F00F27256 /* JWSort.m */,
 			);
 			path = JWSortAndSturct;
 			sourceTree = "<group>";
