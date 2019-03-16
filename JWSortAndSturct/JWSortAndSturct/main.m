@@ -88,8 +88,11 @@ int main(int argc, const char * argv[]) {
 //        int number = [JWBinaryTree numberOfNodeForBinary:tree];
 //        NSLog(@"二叉树所有节点数       %d",number);
         
-        int number = [JWBinaryTree numberOfLeafNodeForBinaryTree:tree];
-        NSLog(@"二叉树所有叶子节点数       %d",number);
+//        int number = [JWBinaryTree numberOfLeafNodeForBinaryTree:tree];
+//        NSLog(@"二叉树所有叶子节点数       %d",number);
+        
+        BOOL b = [JWBinaryTree compareBinaryTree:tree :tree];
+        NSLog(@"%@",b?@"相等":@"不相等");
         
         
     }

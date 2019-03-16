@@ -53,6 +53,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (JWBinaryTree *)reversBinaryTree:(JWBinaryTree *)rootNode;
 
 /**
+ 比较两个二叉树是否相等
+
+ @param rootNode1 茶树1
+ @param rootNode2 茶树2
+ */
++ (BOOL)compareBinaryTree:(JWBinaryTree *)rootNode1 :(JWBinaryTree *)rootNode2;
+
+/**
  前序遍历
 
  @param rootNode 二叉树

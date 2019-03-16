@@ -80,6 +80,35 @@
     rootNode.rightChild = tmp;
     return rootNode;
 }
+#pragma mark - 比较两个二叉树相等
+/*
+ A、B两棵树相等当且仅当RootA->c==RootB–>c,而且A和B的左右子树相等或者左右互换相等。
+ */
++ (BOOL)compareBinaryTree:(JWBinaryTree *)rootNode1 :(JWBinaryTree *)rootNode2 {
+    if (!rootNode1 && !rootNode2) {
+        return YES;
+    }
+    if (!rootNode1 || !rootNode2) {
+        return NO;
+    }
+    if ([rootNode1.data compare:rootNode2.data] != NSOrderedSame) {
+        return NO;
+    }
+    BOOL is_left = [self compareBinaryTree:rootNode1.leftChild :rootNode2.leftChild];
+    BOOL is_right = [self compareBinaryTree:rootNode1.rightChild :rootNode2.rightChild];
+    if (is_left && is_right) {
+        return YES;
+    } else {
+        is_left = [self compareBinaryTree:rootNode1.leftChild :rootNode2.rightChild];
+        is_right = [self compareBinaryTree:rootNode1.rightChild :rootNode2.leftChild];
+        if (is_left && is_right) {
+            return YES;
+        }else {
+            return NO;
+        }
+    }
+    
+}
 #pragma mark - 前序遍历
 + (void)preOrderBinaryTree:(JWBinaryTree *)rootNode {
     if (!rootNode) {
