@@ -46,6 +46,11 @@ NS_ASSUME_NONNULL_BEGIN
  @param k k
  */
 - (void)topKFromArray:(NSMutableArray *)array topIndex:(int)k ;
+
+//找到二维数组中的某个数
+
+- (void)findElem:(NSArray *)array row:(int)n col:(int)m target:(int)target ;
+
 @end
 
 NS_ASSUME_NONNULL_END

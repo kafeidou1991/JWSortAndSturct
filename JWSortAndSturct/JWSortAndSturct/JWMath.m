@@ -136,4 +136,23 @@
 }
 
 
+- (void)findElem:(NSArray *)array row:(int)n col:(int)m target:(int)target {
+    if (array.count == 0 || m <0 || n <0) {
+        return;
+    }
+    int row = 0;
+    while (row < n) {
+        if (([array[row][0]intValue] <= target) && (target <= [array[row][m-1]intValue])) {
+            for (int i = 0; i < m; i++) {
+                if ([array[row][i]intValue] == target) {
+                    NSLog(@"找到了元素在第%d行，第%d位置",row+1,i+1);
+                    return;
+                }
+            }
+        }else {
+            row++;
+        }
+    }
+}
+
 @end
