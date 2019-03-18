@@ -12,12 +12,19 @@
 #import "JWStack.h"
 #import "JWQueue.h"
 #import "JWBinaryTree.h"
+#import "JWMath.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        //数学题
+        JWMath * math = [JWMath new];
+//        [math fibonacci:5];
+        [math topKFromArray:@[@16,@21,@12,@3,@5,@17,@1,@18,@4,@2].mutableCopy topIndex:5];
+        
+        
         //排序
-        JWSort * sort = [JWSort new];
-        [sort sort];
+//        JWSort * sort = [JWSort new];
+//        [sort sort];
         
         
         //单向链表
@@ -63,7 +70,7 @@ int main(int argc, const char * argv[]) {
 //        [queue outQueue];
         
         //二叉树
-        JWBinaryTree * tree = [JWBinaryTree creayBinaryTree:@[@9,@3,@4,@6,@7,@1,@2,@5,@8]];
+//        JWBinaryTree * tree = [JWBinaryTree creayBinaryTree:@[@9,@3,@4,@6,@7,@1,@2,@5,@8]];
 //        JWBinaryTree * tree = [JWBinaryTree creayBinaryTree:@[@1,@2,@3,@4,@5,@6,@7,@8,@9]];
 //        JWBinaryTree * tree = [JWBinaryTree creayBinaryTree:@[@9,@8,@7,@6,@5,@4,@3,@2,@1]];
         
@@ -91,8 +98,8 @@ int main(int argc, const char * argv[]) {
 //        int number = [JWBinaryTree numberOfLeafNodeForBinaryTree:tree];
 //        NSLog(@"二叉树所有叶子节点数       %d",number);
         
-        BOOL b = [JWBinaryTree compareBinaryTree:tree :tree];
-        NSLog(@"%@",b?@"相等":@"不相等");
+//        BOOL b = [JWBinaryTree compareBinaryTree:tree :tree];
+//        NSLog(@"%@",b?@"相等":@"不相等");
         
         
     }

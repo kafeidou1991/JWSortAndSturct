@@ -31,7 +31,7 @@
 //    self.sortArray = [self mergeSort];
 //    [self mergeSort:self.sortArray start:0 end:(int)self.sortArray.count - 1];
 //    [self heapSort];
-    [self search:@24];
+//    [self search:@24];
     NSLog(@"排序结果：%@",self.sortArray.description);
     
     
@@ -206,76 +206,6 @@
     }
     array[i] = temp;
 }
-
-#pragma mark - 两个升序序列重新排序
-- (NSMutableArray *)mergeSort {
-    NSArray *arr1 = @[@2, @5, @8, @10, @14, @16];
-    NSArray *arr2 = @[@3, @7, @9, @11, @15, @17];
-    NSMutableArray *arr = [NSMutableArray array];
-    int i = 0; int j = 0;
-    while (i < arr1.count && j < arr2.count) {
-        if ([arr1[i]intValue] > [arr2[j]intValue]) {
-            [arr addObject:arr2[j]];
-            j++;
-        }else {
-            [arr addObject:arr1[i]];
-            i++;
-        }
-    }
-    if (i != arr1.count) {
-        while (i != arr1.count) {
-            [arr addObject:arr1[i]];
-            i++;
-        }
-    }
-    if (j != arr2.count) {
-        while (j != arr2.count) {
-            [arr addObject:arr2[j]];
-            j++;
-        }
-    }
-    return arr;
-}
-
-#pragma mark - 二分查找、 一个升序序列
-- (void)binarySearch:(NSNumber *)a {
-    NSArray * arr = @[@2, @5, @7, @9, @10, @12, @15, @17, @22, @28];
-    int i = 0; int j = (int)arr.count - 1;
-    int n = -1;
-    while (i <= j) {
-        n = (i + j)/2;
-        if ([arr[n]intValue] == a.intValue) {
-            break;
-        }else if ([arr[n]intValue] > a.intValue) {
-            j = n -1;
-        }else {
-            i = n + 1;
-        }
-    }
-    if (i > j) {
-        //没找到
-        n = -1;
-    }
-    NSLog(@"查找到的索引是%@",n >0 ? @(n) : @"不存在的");
-}
-#pragma mark - 一个升序序列，找到两数之和的两个等于某个数
-- (void)search:(NSNumber *)sum {
-    NSArray * arr = @[@2, @5, @7, @9, @10, @12, @15, @17, @22, @28];
-    int i = 0; int j = (int)arr.count - 1;
-    while (i < j) {
-        if ([arr[i]intValue] + [arr[j]intValue] == sum.intValue) {
-            NSLog(@"查找到的索引是%d====%d",i,j);
-            return;
-        }else if ([arr[i]intValue] + [arr[j]intValue] > sum.intValue){
-            j--;
-        }else {
-            i++;
-        }
-    }
-    NSLog(@"没找到");
-}
-
-
 
 
 @end

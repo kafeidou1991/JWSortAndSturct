@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B7889053222E732500B282FA /* JWBinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = B7889052222E732500B282FA /* JWBinaryTree.m */; };
+		B7C2A410223D02FA008DEF18 /* JWMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A40F223D02FA008DEF18 /* JWMath.m */; };
 		B7F7864322278F3100F27256 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7864222278F3100F27256 /* main.m */; };
 		B7F7864B22278F7F00F27256 /* JWSort.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7864A22278F7F00F27256 /* JWSort.m */; };
 		B7F786542227DCA800F27256 /* JWNodeList.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F786532227DCA800F27256 /* JWNodeList.m */; };
@@ -31,6 +32,8 @@
 		B707C77D2230ED4000C2F2FE /* JWTreeInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWTreeInfo.h; sourceTree = "<group>"; };
 		B7889051222E732500B282FA /* JWBinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWBinaryTree.h; sourceTree = "<group>"; };
 		B7889052222E732500B282FA /* JWBinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWBinaryTree.m; sourceTree = "<group>"; };
+		B7C2A40E223D02FA008DEF18 /* JWMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWMath.h; sourceTree = "<group>"; };
+		B7C2A40F223D02FA008DEF18 /* JWMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWMath.m; sourceTree = "<group>"; };
 		B7F7863F22278F3000F27256 /* JWSortAndSturct */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JWSortAndSturct; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F7864222278F3100F27256 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7F7864922278F7F00F27256 /* JWSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWSort.h; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				B7F7864222278F3100F27256 /* main.m */,
+				B7C2A40E223D02FA008DEF18 /* JWMath.h */,
+				B7C2A40F223D02FA008DEF18 /* JWMath.m */,
 				B7F7864922278F7F00F27256 /* JWSort.h */,
 				B7F7864A22278F7F00F27256 /* JWSort.m */,
 				B707C77D2230ED4000C2F2FE /* JWTreeInfo.h */,
@@ -145,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C2A410223D02FA008DEF18 /* JWMath.m in Sources */,
 				B7F8C2AF222D34A700B0388F /* JWQueue.m in Sources */,
 				B7F7864B22278F7F00F27256 /* JWSort.m in Sources */,
 				B7889053222E732500B282FA /* JWBinaryTree.m in Sources */,
