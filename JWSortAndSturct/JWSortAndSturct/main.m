@@ -21,15 +21,20 @@ int main(int argc, const char * argv[]) {
         
         //数学题
         JWMath * math = [JWMath new];
+        
+        [math isPowerOfTwo:6];
+
+        
+        
 //        [math fibonacci:5];
 //        [math topKFromArray:@[@16,@21,@12,@3,@5,@17,@1,@18,@4,@2].mutableCopy topIndex:5];
-        NSArray * array = @[
-                            @[@1,@2,@3],
-                            @[@4,@5,@6],
-                            @[@7,@8,@9]
-                            ];
-        [math findElem:array row:3 col:3 target:8];
         
+//        NSArray * array = @[
+//                            @[@1,@2,@3],
+//                            @[@4,@5,@6],
+//                            @[@7,@8,@9]
+//                            ];
+//        [math findElem:array row:3 col:3 target:8];
         
         
         //排序

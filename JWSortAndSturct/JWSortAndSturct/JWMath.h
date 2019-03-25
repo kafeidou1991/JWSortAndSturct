@@ -51,6 +51,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)findElem:(NSArray *)array row:(int)n col:(int)m target:(int)target ;
 
+
+/**
+ 判断一个数，是否是2的平方数
+
+ @param n
+ */
+- (void)isPowerOfTwo:(int)n;
+
 @end
 
 NS_ASSUME_NONNULL_END

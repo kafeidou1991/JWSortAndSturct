@@ -155,4 +155,35 @@
     }
 }
 
+
+/**
+ 判断一个数是否是2的平方数
+
+ @param n n
+ */
+- (void)isPowerOfTwo:(int)n {
+    if (n <= 0 ) {
+        NSLog(@"不是2的平方数");
+        return;
+    }
+    if (n == 1) {
+        NSLog(@"是2的平方数");
+        return;
+    }
+    while (n != 1) {
+        int pow = n%2;
+        //求余不为0，肯定不是2的平方数
+        if (pow != 0) {
+            NSLog(@"不是2的平方数");
+            return;
+        }
+        n = n/2;
+    }
+    NSLog(@"是2的平方数");
+}
+
+- (void)dealloc {
+    NSLog(@"%s",__func__);
+}
+
 @end
