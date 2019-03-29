@@ -18,7 +18,7 @@
     self = [super init];
     if (self) {
 //        self.sortArray = @[@1,@5,@3,@5,@8,@9,@7,@4,@2,@6].mutableCopy;
-        self.sortArray = @[@1,@5,@4,@2,@3].mutableCopy;
+        self.sortArray = @[@1,@5,@4,@2,@3,@6,@7].mutableCopy;
     }
     return self;
 }
@@ -32,6 +32,7 @@
 //    [self mergeSort:self.sortArray start:0 end:(int)self.sortArray.count - 1];
 //    [self heapSort];
 //    [self search:@24];
+    NSLog(@"中位数是%d",[self findMiddleElem:self.sortArray]);
     NSLog(@"排序结果：%@",self.sortArray.description);
     
     
@@ -205,6 +206,42 @@
         j = 2 * i + 1; // 调整的子节点的子节点
     }
     array[i] = temp;
+}
+
+#pragma mark - 寻找中位数
+- (int)findMiddleElem:(NSMutableArray *)array{
+    if (array.count == 0) {
+        return -1;
+    }
+    int start = 0;
+    int end = (int)array.count - 1;
+    int mid = ((int)array.count - 1) / 2;
+    int index = [self quickSortElem:array start:start end:end];
+    while (index != mid) {
+        if (mid < index) {
+            index = [self quickSortElem:array start:start end:index - 1];
+        }else {
+            index = [self quickSortElem:array start:index +1 end:end];
+        }
+    }
+    return [array[index]intValue];
+}
+- (int)quickSortElem:(NSMutableArray *)array start:(int)start end:(int)end {
+    int low = start; int high = end;
+    //分界点
+    NSNumber * midValue = array[low];
+    while (low < high) {
+        while (low < high && [midValue compare:array[high]] != NSOrderedDescending) {
+            high --;
+        }
+        array[low] = array[high];
+        while (low < high && [midValue compare:array[low]] != NSOrderedAscending) {
+            low ++;
+        }
+        array[high] = array[low];
+    }
+    array[low] = midValue;
+     return low;
 }
 
 

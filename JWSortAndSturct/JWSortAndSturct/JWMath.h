@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JWMath : NSObject
+@interface JWMath : NSObject 
 
 /**
  斐波拉契函数的第N个数是多少
