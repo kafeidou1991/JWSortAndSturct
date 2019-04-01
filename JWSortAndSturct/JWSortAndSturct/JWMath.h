@@ -59,6 +59,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)isPowerOfTwo:(int)n;
 
+/**
+ 求base的n次方函数 pow函数
+
+ @param base 底数
+ @param n 阶乘
+ @return 返回
+ */
+- (double)myPower:(int)base n:(int)n ;
+
 @end
 
 NS_ASSUME_NONNULL_END

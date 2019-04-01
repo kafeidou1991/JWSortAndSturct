@@ -20,9 +20,10 @@ int main(int argc, const char * argv[]) {
         
         
         //数学题
-//        JWMath * math = [JWMath new];
-//
+        JWMath * math = [JWMath new];
+
 //        [math isPowerOfTwo:6];
+        NSLog(@"%g",[math myPower:10 n:-4]);
 
         
         
@@ -38,8 +39,8 @@ int main(int argc, const char * argv[]) {
         
         
         //排序
-        JWSort * sort = [JWSort new];
-        [sort sort];
+//        JWSort * sort = [JWSort new];
+//        [sort sort];
         
         
         //单向链表
