@@ -14,15 +14,32 @@
 #import "JWBinaryTree.h"
 #import "JWMath.h"
 
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
+        
         //数学题
         JWMath * math = [JWMath new];
+
+//        [math isPowerOfTwo:6];
+        NSLog(@"%g",[math myPower:10 n:-4]);
+
+        
+        
 //        [math fibonacci:5];
 //        [math topKFromArray:@[@16,@21,@12,@3,@5,@17,@1,@18,@4,@2].mutableCopy topIndex:5];
 //        [math isPrime:7];
 //        [math isUgly:14];
-        [math reverse:@"abcdfghjk"];
+//        [math reverse:@"abcdfghjk"];
+        
+//        NSArray * array = @[
+//                            @[@1,@2,@3],
+//                            @[@4,@5,@6],
+//                            @[@7,@8,@9]
+//                            ];
+//        [math findElem:array row:3 col:3 target:8];
+        
         
         //排序
 //        JWSort * sort = [JWSort new];

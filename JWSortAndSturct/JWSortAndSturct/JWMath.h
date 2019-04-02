@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JWMath : NSObject
+@interface JWMath : NSObject 
 
 /**
  斐波拉契函数的第N个数是多少
@@ -67,6 +67,27 @@ NS_ASSUME_NONNULL_BEGIN
  @param s 递归翻转
  */
 - (void)reverse:(NSString *)s;
+
+//找到二维数组中的某个数
+
+- (void)findElem:(NSArray *)array row:(int)n col:(int)m target:(int)target ;
+
+
+/**
+ 判断一个数，是否是2的平方数
+
+ @param n
+ */
+- (void)isPowerOfTwo:(int)n;
+
+/**
+ 求base的n次方函数 pow函数
+
+ @param base 底数
+ @param n 阶乘
+ @return 返回
+ */
+- (double)myPower:(int)base n:(int)n ;
 
 @end
 

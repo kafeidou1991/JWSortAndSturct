@@ -190,4 +190,89 @@
 }
 
 
+- (void)findElem:(NSArray *)array row:(int)n col:(int)m target:(int)target {
+    if (array.count == 0 || m <0 || n <0) {
+        return;
+    }
+    int row = 0;
+    while (row < n) {
+        if (([array[row][0]intValue] <= target) && (target <= [array[row][m-1]intValue])) {
+            for (int i = 0; i < m; i++) {
+                if ([array[row][i]intValue] == target) {
+                    NSLog(@"找到了元素在第%d行，第%d位置",row+1,i+1);
+                    return;
+                }
+            }
+        }else {
+            row++;
+        }
+    }
+}
+
+
+/**
+ 判断一个数是否是2的平方数
+
+ @param n n
+ */
+- (void)isPowerOfTwo:(int)n {
+    if (n <= 0 ) {
+        NSLog(@"不是2的平方数");
+        return;
+    }
+    if (n == 1) {
+        NSLog(@"是2的平方数");
+        return;
+    }
+    while (n != 1) {
+        int pow = n%2;
+        //求余不为0，肯定不是2的平方数
+        if (pow != 0) {
+            NSLog(@"不是2的平方数");
+            return;
+        }
+        n = n/2;
+    }
+    NSLog(@"是2的平方数");
+}
+
+
+/**
+ pow函数
+ 思想就是 使用递归，如果是奇数 则value = value * value * base  偶数：value = value * value  考虑负数
+ @param base 底数
+ @param n 指数
+ @return 返回值
+ */
+- (double)myPower:(int)base n:(int)n {
+    double result = 0;
+    if (base == 0) {
+        return 0;
+    }
+    if (n == 0) {
+        return 1;
+    }
+    if (n == 1) {
+        return base;
+    }
+    result = [self myPower:base n:ABS(n/2)];
+    if ((n&1) != 0) { //奇数
+        result = result * result * base;
+    }else {
+        result = result * result;
+    }
+    if (n < 0) {
+        result = 1/ result;
+    }
+    return result;
+}
+
+
+
+
+
+- (void)dealloc {
+    NSLog(@"%s",__func__);
+}
+
 @end
