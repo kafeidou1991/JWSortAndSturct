@@ -136,4 +136,58 @@
 }
 
 
+- (void)isPrime:(int)num {
+    if (num <=0) {
+        return;
+    }
+    int tmp = num -1;
+    for (int i = 2; i<=tmp; i++) {
+        if (num % i == 0) {
+            NSLog(@"不是质数");
+            return;
+        }
+    }
+    NSLog(@"是质数");
+}
+
+- (void)isUgly:(int)num {
+    if (num <=0) {
+        return;
+    }
+    if (num == 1) {
+        NSLog(@"是丑数");
+        return;
+    }
+    while (num % 2 == 0) {
+        num /=2;
+    }
+    while (num % 3 == 0) {
+        num /=3;
+    }
+    while (num % 5 == 0) {
+        num /=5;
+    }
+    if (num == 1) {
+        NSLog(@"是丑数");
+    }else {
+        NSLog(@"不是丑数");
+    }
+}
+//递归翻转
+- (void)reverse:(NSString *)s {
+    if (!s || s.length == 0) {
+        return;
+    }
+    NSLog(@"翻转的字符串：%@",[self reverseString:s]);
+}
+- (NSString *)reverseString:(NSString *)s {
+    if (s.length <= 1) {
+        return s;
+    }
+    NSString * leftString = [s substringToIndex:s.length/2];
+    NSString * rightString = [s substringFromIndex:s.length/2];
+    return [NSString stringWithFormat:@"%@%@",[self reverseString:rightString],[self reverseString:leftString]];
+}
+
+
 @end

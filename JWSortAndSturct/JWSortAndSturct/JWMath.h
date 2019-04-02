@@ -46,6 +46,28 @@ NS_ASSUME_NONNULL_BEGIN
  @param k k
  */
 - (void)topKFromArray:(NSMutableArray *)array topIndex:(int)k ;
+
+/**
+ 是否是质数
+
+ @param num num
+ */
+- (void)isPrime:(int)num;
+
+/**
+ 是否是丑数 （因子仅包含2，3，5）
+ 
+ @param num num
+ */
+- (void)isUgly:(int)num;
+
+/**
+ 字符串翻转
+
+ @param s 递归翻转
+ */
+- (void)reverse:(NSString *)s;
+
 @end
 
 NS_ASSUME_NONNULL_END

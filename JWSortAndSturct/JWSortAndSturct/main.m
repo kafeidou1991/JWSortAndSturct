@@ -19,8 +19,10 @@ int main(int argc, const char * argv[]) {
         //数学题
         JWMath * math = [JWMath new];
 //        [math fibonacci:5];
-        [math topKFromArray:@[@16,@21,@12,@3,@5,@17,@1,@18,@4,@2].mutableCopy topIndex:5];
-        
+//        [math topKFromArray:@[@16,@21,@12,@3,@5,@17,@1,@18,@4,@2].mutableCopy topIndex:5];
+//        [math isPrime:7];
+//        [math isUgly:14];
+        [math reverse:@"abcdfghjk"];
         
         //排序
 //        JWSort * sort = [JWSort new];
